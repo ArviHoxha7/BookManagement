@@ -6,7 +6,7 @@ document.getElementById('addBookForm').addEventListener('submit', function(event
     const genre = document.getElementById('genre').value;
     const price = parseFloat(document.getElementById('price').value);
   
-    if (isNaN(price) || price <= 0) {
+    if (isNaN(price) || price <= 0 || price > 1000) {
       alert('Please enter a valid price.');
       return;
     }
